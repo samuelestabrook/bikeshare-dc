@@ -1,0 +1,66 @@
+demo()
+demo(package = .packages(all.available = TRUE))
+install.packages("rattle")
+library(rattle)
+rattle()
+library(rattle)
+rattle()
+library(rattle)
+rattle()
+library(rattle)
+rattle()
+install.packages("ggmap")
+library[ggmap]
+library{ggmap}
+library:ggmap
+library(ggmap)
+geocode("6037 20th St N, Arlington VA 22205")
+geocode("The World Bank").more
+geocode("The World Bank", more)
+geocode("The World Bank", c(more))
+geocode("The World Bank", "more")
+qmap("Arlington VA", 13)
+qmap("Arlington VA", 13, source="Stamin", map-type="watercolor")
+qmap(location='arlington, va', zoom=13, source='stamen', maptype='watercolor')
+ghaana <- read.csv("~/Desktop/OpenDataDay_MappingDemo_Materials/ghana_city_pop.csv")
+ghana
+read.csv("~/Desktop/OpenDataDay_MappingDemo_Materials/ghana_city_pop.csv")
+g1 <- qmap(location="Ghana", zoom=7)
+qmap(locaiton="Ghana, zoom=7")
+ghaana
+g1
+gglocator()
+geom_point(data=ghaana,aes(x=longitude,y=latitude,size=Estimates2013),color="red")
+g1+geom_point(data=ghaana,aes(x=longitude,y=latitude,size=Estimates2013),color="red")
+install.packages("alphahull")
+update.packages
+map alphahull
+man alphahull
+source("/Users/samuelestabrook/Documents/git/nyc-citibike-data/analysis/analysis.R")
+install.packages('ggplot2', dep = TRUE)
+source("/Users/samuelestabrook/Documents/git/nyc-citibike-data/analysis/analysis.R")
+install.packages('dplyr', dep = TRUE)
+require("RPostgreSQL")
+pw <- {#
+	"stapler2"#
+}
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname = "postgres",#
+	host = "localhost", port = 5432,#
+	user = "openpg", password = pw)
+con <- dbConnect(drv, dbname = "bikesharedb",#
+	host = "localhost", port = 5432,#
+	user = "samuelestabrook", password = pw)
+rm(pw)
+dbExistsTable(con, "bike_trips")
+require("RPostgreSQL")
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname = "bikesharedb",#
+	host = "localhost")
+dbExistsTable(con, "bike_trips")
+library(RPostgreSQL)
+library(ggplot2)
+require("ggplot2")
+library(ggplot2)
+setwd("/Users/samuelestabrook/Documents/git/bikeshare-dc/analysis")
+source("basic_analysis.R")
