@@ -54,6 +54,10 @@ theme_tws = function(base_size = 12) {
           legend.key = element_blank())
 }
 
+to_slug = function(string) {
+  gsub("__", "_", gsub("___", "_", gsub("__", "_", gsub("\\.", "_", gsub("\'", "_", gsub("&", "_", gsub("-", "_", gsub("/", "_", gsub(" ", "_", tolower(string))))))))))
+}
+
 #theme_dark_map = function(base_size = 12) {
 #  theme_bw(base_size) +
 #    theme(text = element_text(family = font_family, color = "#ffffff"),
