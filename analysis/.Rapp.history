@@ -63,4 +63,31 @@ library(ggplot2)
 require("ggplot2")
 library(ggplot2)
 setwd("/Users/samuelestabrook/Documents/git/bikeshare-dc/analysis")
-source("basic_analysis.R")
+library(RPostgreSQL)#
+library(ggplot2)#
+library(extrafont)#
+library(dplyr)#
+library(scales)#
+source("helpers.R")
+bikeshare_signal = query("#
+  SELECT#
+    trip_date,#
+    bikes#
+  FROM bike_zeros#
+  WHERE trip_date >= '2015-06-03'::timestamp#
+    AND trip_date <  '2015-06-04'::timestamp#
+  ")
+bikeshare_signal$trip_date = as.POSIXct(bikeshare_signal$trip_date, tz='UTC')
+png(filename = 'graphs/signal_bikes2.png', width = 640, height = 420)#
+ggplot(data = bikeshare_signal, aes(x = trip_date, y = bikes)) +#
+  geom_bar(stat='identity') +#
+  scale_x_datetime(date_breaks=('2 hours'), labels=date_format('%H')) +#
+  title_with_subtitle('Union Station Bikeshare Pickups')#
+dev.off()
+tzfile <- "/usr/share/zoneinfo/zone.tab"#
+tzones <- read.delim(tzfile, row.names = NULL, header = FALSE,#
+    col.names = c("country", "coords", "name", "comments"),#
+    as.is = TRUE, fill = TRUE, comment.char = "#")#
+grep("^New", tzones$name, value=TRUE)
+grep("^Ame", tzones$name, value=TRUE)
+grep("^America/N", tzones$name, value=TRUE)
