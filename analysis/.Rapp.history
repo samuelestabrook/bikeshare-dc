@@ -42,7 +42,7 @@ source("/Users/samuelestabrook/Documents/git/nyc-citibike-data/analysis/analysis
 install.packages('dplyr', dep = TRUE)
 require("RPostgreSQL")
 pw <- {#
-	"stapler2"#
+	"--------"#
 }
 drv <- dbDriver("PostgreSQL")
 con <- dbConnect(drv, dbname = "postgres",#
